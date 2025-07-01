@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: echo-ip-svc
-  namespace: argocd
+  namespace: echo-ip
 spec:
   selector:
     app.kubernetes.io/name: echo-ip-pod
