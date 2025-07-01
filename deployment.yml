@@ -14,4 +14,5 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.24
+        # image: nginx:1.24
+        image: 192.168.127.131:32000/echo-ip
