@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deploy-test01
+  name: echo-ip-deploy
+  namespace: argocd
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app.kubernetes.io/name: web-deploy
+      app.kubernetes.io/name: echo-ip-pod
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: web-deploy
+        app.kubernetes.io/name: echo-ip-pod
     spec:
       containers:
-      - name: nginx
-        # image: nginx:1.24
+      - name: echo-ip-container
         image: 192.168.127.131:32000/echo-ip
