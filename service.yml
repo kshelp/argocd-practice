@@ -5,7 +5,8 @@ metadata:
 spec:
   selector:
     app.kubernetes.io/name: web-deploy
-  type: ClusterIP
+  # type: ClusterIP
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 80
